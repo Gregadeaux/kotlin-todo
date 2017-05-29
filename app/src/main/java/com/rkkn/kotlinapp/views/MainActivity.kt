@@ -15,8 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        todoList.layoutManager = LinearLayoutManager(this)
-        todoList.adapter = TodoAdapter()
+        // Kotlin's Android Extension Library adds your view's UI elements as instance variables on the view
+        // So you don't need to do findViewById(R.id.todoList), you can just use todoList
+        this.todoList.layoutManager = LinearLayoutManager(this)
+        this.todoList.adapter = TodoAdapter()
 
         TodoController.instance.addTodo(Todo("FINISH APP"))
 
