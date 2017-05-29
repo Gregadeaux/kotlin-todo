@@ -5,12 +5,7 @@ import com.rkkn.kotlinapp.data.Todo
 /**
  * Created by greg on 5/28/17.
  */
-public class TodoController private constructor(){
-    // Boilerplate to create a lazily instantiated singleton
-    private object HOLDER { val instance = TodoController()}
-    // Kind of like a static inner class
-    companion object { val instance: TodoController by lazy { HOLDER.instance }}
-
+object TodoController{
     private val todos: MutableList<Todo> = mutableListOf()
     private val subscribers: MutableList<TodoSubscriber> = mutableListOf()
 

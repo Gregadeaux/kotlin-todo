@@ -26,7 +26,7 @@ public class TodoAdapter : RecyclerView.Adapter<TodoAdapter.ViewHolder>() {
             }
         }
 
-        TodoController.instance.let {
+        TodoController.let {
             todos = it.todos()
             it.subscribe(listener)
         }

@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         this.todoList.layoutManager = LinearLayoutManager(this)
         this.todoList.adapter = TodoAdapter()
 
-        TodoController.instance.addTodo(Todo("FINISH APP"))
+        TodoController.addTodo(Todo("FINISH APP"))
 
     }
 
